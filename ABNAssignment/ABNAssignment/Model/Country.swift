@@ -4,13 +4,15 @@
 //
 //  Created by Rodrigo Ruiz Murguía on 19/06/26.
 //
-enum Country: String, Codable, CaseIterable {
+enum Country: String, Codable, CaseIterable, Identifiable {
     case mexico = "mx"
     case brasil = "br"
     case argentina = "ar"
     case england = "en"
     case spain = "sp"
     case germany = "de"
+
+    var id: String { rawValue }
 
     var name: String {
         switch self {
