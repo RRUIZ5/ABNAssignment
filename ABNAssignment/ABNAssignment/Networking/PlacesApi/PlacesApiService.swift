@@ -18,7 +18,6 @@ final class PlacesApiService: PlacesApi {
         guard let url,
               case let url = url.appending(component: country.name).appendingPathExtension("json")
         else { throw PlacesAPIError.invalidURL }
-        print(url)
         let (data, response) = try await urlSession.data(from: url)
 
         guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
