@@ -2,21 +2,25 @@
   {
     "name": "Camp Nou",
     "latitude": 41.3809,
-    "longitude": 2.1228
+    "longitude": 2.1228,
+    "country": "sp"
   },
   {
     "name": "Santiago Bernabéu",
     "latitude": 40.4531,
-    "longitude": -3.6883
+    "longitude": -3.6883,
+    "country": "sp"
   },
   {
     "name": "Metropolitano",
     "latitude": 40.4362,
-    "longitude": -3.5995
+    "longitude": -3.5995,
+    "country": "sp"
   },
   {
     "name": "Benito Villamarín",
     "latitude": 37.3564,
-    "longitude": -5.9817
+    "longitude": -5.9817,
+    "country": "sp"
   }
  ]

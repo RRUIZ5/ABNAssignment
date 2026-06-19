@@ -2,21 +2,25 @@
   {
     "name": "Old Trafford",
     "latitude": 53.4631,
-    "longitude": -2.2913
+    "longitude": -2.2913,
+    "country": "en"
   },
   {
     "name": "Tottenham Hotspur Stadium",
     "latitude": 51.6043,
-    "longitude": -0.0664
+    "longitude": -0.0664,
+    "country": "en"
   },
   {
     "name": "London Stadium",
     "latitude": 51.5386,
-    "longitude": -0.0165
+    "longitude": -0.0165,
+    "country": "en"
   },
   {
     "name": "Anfield",
     "latitude": 53.4308,
-    "longitude": -2.9608
+    "longitude": -2.9608,
+    "country": "en"
   }
  ]

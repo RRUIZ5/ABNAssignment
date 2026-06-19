@@ -18,9 +18,11 @@ struct ContentView: View {
         .padding()
         .task {
             let api = PlacesApiService()
-            let places = try! await api.fetchPlaces()
-            print(places)
-            print("nada")
+            for country in Country.allCases {
+                let places = try! await api.fetchPlaces(for: country)
+                print(places)
+                print("nada")
+            }
         }
     }
 }

@@ -7,12 +7,12 @@
 
 
 final class MockPlacesApi: PlacesApi {
-    func fetchPlaces() async throws -> [Place] {
+    func fetchPlaces(for country: Country) async throws -> [Place] {
         [
-            Place(name: "Amsterdam", latitude: 52.3547498, longitude: 4.8339215),
-            Place(name: "Mumbai", latitude: 19.0823998, longitude: 72.8111468),
-            Place(name: "Copenhagen", latitude: 55.6713442, longitude: 12.523785),
-            Place(name: nil, latitude: 40.4380638, longitude: -3.7495758)
+            Place(name: "Estadio Azteca", latitude: 19.3029, longitude: -99.1505, country: .mexico),
+            Place(name: "Estadio Olímpico Universitario", latitude: 19.3326, longitude: -99.1925, country: .mexico),
+            Place(name: "Estadio BBVA", latitude: 25.6692, longitude: -100.2446, country: .mexico),
+            Place(name: "Estadio Jalisco", latitude: 20.7050, longitude: -103.3288, country: .mexico)
         ]
     }
 }

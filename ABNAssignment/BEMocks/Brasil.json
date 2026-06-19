@@ -2,21 +2,25 @@
   {
     "name": "Maracanã",
     "latitude": -22.9121,
-    "longitude": -43.2302
+    "longitude": -43.2302,
+    "country": "br"
   },
   {
     "name": "Mané Garrincha",
     "latitude": -15.7835,
-    "longitude": -47.8992
+    "longitude": -47.8992,
+    "country": "br"
   },
   {
     "name": "Morumbi",
     "latitude": -23.6008,
-    "longitude": -46.7208
+    "longitude": -46.7208,
+    "country": "br"
   },
   {
     "name": "Mineirão",
     "latitude": -19.8659,
-    "longitude": -43.9710
+    "longitude": -43.9710,
+    "country": "br"
   }
 ]

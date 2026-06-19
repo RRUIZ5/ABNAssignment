@@ -2,21 +2,25 @@
   {
     "name": "Monumental",
     "latitude": -34.5453,
-    "longitude": -58.4497
+    "longitude": -58.4497,
+    "country": "ar"
   },
   {
     "name": "Mario Alberto Kempes",
     "latitude": -31.3657,
-    "longitude": -64.2466
+    "longitude": -64.2466,
+    "country": "ar"
   },
   {
     "name": "José Amalfitani",
     "latitude": -34.6356,
-    "longitude": -58.5202
+    "longitude": -58.5202,
+    "country": "ar"
   },
   {
     "name": "Libertadores de América",
     "latitude": -34.6708,
-    "longitude": -58.3707
+    "longitude": -58.3707,
+    "country": "ar"
   }
 ]

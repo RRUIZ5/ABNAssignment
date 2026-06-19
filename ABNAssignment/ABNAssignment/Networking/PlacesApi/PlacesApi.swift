@@ -6,5 +6,5 @@
 //
 
 protocol PlacesApi {
-    func fetchPlaces() async throws -> [Place]
+    func fetchPlaces(for country: Country) async throws -> [Place]
 }
