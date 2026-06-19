@@ -16,6 +16,12 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .task {
+            let api = PlacesApiService()
+            let places = try! await api.fetchPlaces()
+            print(places)
+            print("nada")
+        }
     }
 }
 
