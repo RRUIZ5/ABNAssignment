@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Estadio Azteca",
+    "latitude": 19.3029,
+    "longitude": -99.1505
+  },
+  {
+    "name": "Estadio Olímpico Universitario",
+    "latitude": 19.3326,
+    "longitude": -99.1925
+  },
+  {
+    "name": "Estadio BBVA",
+    "latitude": 25.6692,
+    "longitude": -100.2446
+  },
+  {
+    "name": "Estadio Jalisco",
+    "latitude": 20.7050,
+    "longitude": -103.3288
+  }
+]
