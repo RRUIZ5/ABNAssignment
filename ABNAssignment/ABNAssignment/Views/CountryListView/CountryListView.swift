@@ -27,21 +27,13 @@ struct CountryListView: View {
     private var content: some View {
         switch viewModel.state {
         case .idle:
-            Text("Welcome")
+            CountryListIdleView()
         case .loading:
-            VStack {
-                Text("Loading stadiums")
-                ProgressView()
-            }
-            .frame(maxHeight: .infinity, alignment: .top)
+            CountryListLoadingView()
         case .failed(let error):
-            Text(error.localizedDescription)
+            CountryListErrorView(error: error)
         case .success(let stadiums):
-            Text("Select a country")
-            List(stadiums.countries) { country in
-                NavigationLink("\(country.emoji) \(country.name)", value: country)
-            }
-            .listStyle(.plain)
+            CountryListDetailView(countries: stadiums.countries)
         }
     }
 }
