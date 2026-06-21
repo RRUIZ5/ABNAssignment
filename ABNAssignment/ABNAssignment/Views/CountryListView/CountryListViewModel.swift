@@ -25,7 +25,7 @@ final class CountryListViewModel {
         state = .loading
         do {
             let stadiums = try await loadStadiums()
-            state = .success(stadiums: StadiumData(stadiums: stadiums))
+            state = .success(stadiumData: StadiumData(stadiums: stadiums))
         } catch {
             state = .failed(error: error)
         }
@@ -55,7 +55,7 @@ enum StadiumViewModelState {
     case idle
     case loading
     case failed(error: Error)
-    case success(stadiums: StadiumData)
+    case success(stadiumData: StadiumData)
 }
 
 struct StadiumData {

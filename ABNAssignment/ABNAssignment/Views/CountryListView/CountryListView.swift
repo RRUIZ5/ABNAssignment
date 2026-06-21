@@ -15,9 +15,6 @@ struct CountryListView: View {
             content
             .navigationTitle("ABNAmro assignment")
             .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(for: Country.self) { country in
-                Text("hola?")
-            }
         }.task {
             await viewModel.fetchStadiums()
         }
@@ -32,8 +29,13 @@ struct CountryListView: View {
             CountryListLoadingView()
         case .failed(let error):
             CountryListErrorView(error: error)
-        case .success(let stadiums):
-            CountryListDetailView(countries: stadiums.countries)
+        case .success(let stadiumData):
+            CountryListDetailView(countries: stadiumData.countries)
+                .navigationDestination(for: Country.self) { country in
+                    StadiumDetailView(
+                        stadiums: stadiumData.stadiums[country] ?? []
+                    )
+                }
         }
     }
 }
