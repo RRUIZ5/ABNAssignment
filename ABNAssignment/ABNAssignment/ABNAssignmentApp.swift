@@ -11,7 +11,7 @@ import SwiftUI
 struct ABNAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-            CountryListView(viewModel: StadiumViewModel())
+            CountryListView(viewModel: CountryListViewModel())
         }
     }
 }

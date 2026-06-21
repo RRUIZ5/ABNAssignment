@@ -1,5 +1,5 @@
 //
-//  StadiumManager.swift
+//  CountryListViewModel.swift
 //  ABNAssignment
 //
 //  Created by Rodrigo Ruiz Murguía on 21/06/26.
@@ -9,7 +9,7 @@ import Foundation
 import Observation
 
 @Observable
-final class StadiumViewModel {
+final class CountryListViewModel {
     var state: StadiumViewModelState
 
     private let stadiumApi: StadiumApi

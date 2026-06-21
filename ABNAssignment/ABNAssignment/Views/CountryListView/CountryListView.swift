@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CountryListView: View {
-    let viewModel: StadiumViewModel
+    let viewModel: CountryListViewModel
 
     var body: some View {
         NavigationStack {
@@ -39,5 +39,5 @@ struct CountryListView: View {
 }
 
 #Preview {
-    CountryListView(viewModel: StadiumViewModel(stadiumApi: MockStadiumApi()))
+    CountryListView(viewModel: CountryListViewModel(stadiumApi: MockStadiumApi()))
 }
