@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CountryListView: View {
-    @State private var isEmpty = false
+    let viewModel: StadiumViewModel
+
     var body: some View {
         NavigationStack {
             content
@@ -17,20 +18,27 @@ struct CountryListView: View {
             .navigationDestination(for: Country.self) { country in
                 Text("hola?")
             }
+        }.task {
+            await viewModel.fetchStadiums()
         }
     }
 
     @ViewBuilder
     private var content: some View {
-        if isEmpty {
+        switch viewModel.state {
+        case .idle:
+            Text("Welcome")
+        case .loading:
             VStack {
                 Text("Loading places")
                 ProgressView()
             }
             .frame(maxHeight: .infinity, alignment: .top)
-        } else {
+        case .failed(let error):
+            Text(error.localizedDescription)
+        case .success(let stadiums):
             Text("Select a country")
-            List(Country.allCases) { country in
+            List(stadiums.countries) { country in
                 NavigationLink("\(country.emoji) \(country.name)", value: country)
             }
             .listStyle(.plain)
@@ -39,5 +47,5 @@ struct CountryListView: View {
 }
 
 #Preview {
-    CountryListView()
+    CountryListView(viewModel: StadiumViewModel(placesApi: MockPlacesApi()))
 }

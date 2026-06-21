@@ -4,7 +4,7 @@
 //
 //  Created by Rodrigo Ruiz Murguía on 19/06/26.
 //
-enum Country: String, Codable, CaseIterable, Identifiable {
+enum Country: String, Codable, CaseIterable, Identifiable, Comparable {
     case mexico = "mx"
     case brasil = "br"
     case argentina = "ar"
@@ -34,5 +34,9 @@ enum Country: String, Codable, CaseIterable, Identifiable {
         case .spain: "🇪🇸"
         case .germany: "🇩🇪"
         }
+    }
+
+    static func < (lhs: Country, rhs: Country) -> Bool {
+        lhs.name < rhs.name
     }
 }
