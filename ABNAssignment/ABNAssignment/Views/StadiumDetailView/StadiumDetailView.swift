@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StadiumDetailView: View {
     let stadiums: [Stadium]
+    private let wikipediaManger = WikipediaManager()
 
     var body: some View {
         List(stadiums) { stadium in
@@ -16,11 +17,11 @@ struct StadiumDetailView: View {
                 Text(stadium.country.emoji)
                 Text(stadium.name)
             }
+            .onTapGesture {
+                wikipediaManger.openWikipedia(for: stadium)
+            }
         }
         .listStyle(.plain)
-        .onTapGesture {
-            print("hola?")
-        }
     }
 }
 
