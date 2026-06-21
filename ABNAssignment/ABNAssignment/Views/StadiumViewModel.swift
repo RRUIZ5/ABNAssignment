@@ -12,12 +12,12 @@ import Observation
 final class StadiumViewModel {
     var state: StadiumViewModelState
 
-    private let placesApi: PlacesApi
+    private let stadiumApi: StadiumApi
 
     init(
-        placesApi: PlacesApi = PlacesApiService()
+        stadiumApi: StadiumApi = StadiumApiService()
     ) {
-        self.placesApi = placesApi
+        self.stadiumApi = stadiumApi
         state = .idle
     }
 
@@ -31,21 +31,21 @@ final class StadiumViewModel {
         }
     }
 
-    private func loadStadiums() async throws -> [Country: [Place]] {
-        try await withThrowingTaskGroup(of: [Place].self) { group in
+    private func loadStadiums() async throws -> [Country: [Stadium]] {
+        try await withThrowingTaskGroup(of: [Stadium].self) { group in
             for country in Country.allCases {
                 group.addTask {
-                    try await self.placesApi.fetchPlaces(for: country)
+                    try await self.stadiumApi.fetchStadiums(for: country)
                 }
             }
 
-            var allPlaces: [Place] = []
-            for try await places in group {
-                allPlaces.append(contentsOf: places)
+            var allStadiums: [Stadium] = []
+            for try await stadiums in group {
+                allStadiums.append(contentsOf: stadiums)
             }
 
-            return Dictionary(grouping: allPlaces) { place in
-                place.country
+            return Dictionary(grouping: allStadiums) { stadium in
+                stadium.country
             }
         }
     }
@@ -59,10 +59,10 @@ enum StadiumViewModelState {
 }
 
 struct StadiumData {
-    let stadiums: [Country: [Place]]
+    let stadiums: [Country: [Stadium]]
     var countries: [Country] { Array(stadiums.keys.sorted()) }
 
-    init(stadiums: [Country : [Place]]) {
+    init(stadiums: [Country : [Stadium]]) {
         self.stadiums = stadiums
     }
 }

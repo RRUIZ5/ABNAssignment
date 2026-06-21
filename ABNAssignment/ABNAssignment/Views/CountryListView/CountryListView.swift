@@ -30,7 +30,7 @@ struct CountryListView: View {
             Text("Welcome")
         case .loading:
             VStack {
-                Text("Loading places")
+                Text("Loading stadiums")
                 ProgressView()
             }
             .frame(maxHeight: .infinity, alignment: .top)
@@ -47,5 +47,5 @@ struct CountryListView: View {
 }
 
 #Preview {
-    CountryListView(viewModel: StadiumViewModel(placesApi: MockPlacesApi()))
+    CountryListView(viewModel: StadiumViewModel(stadiumApi: MockStadiumApi()))
 }
