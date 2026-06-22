@@ -10,8 +10,7 @@ import SwiftUI
 struct CountryListLoadingView: View {
     var body: some View {
         VStack {
-            Text("Loading stadiums")
-            ProgressView()
+            ProgressView("Loading stadiums")
         }
         .frame(maxHeight: .infinity, alignment: .top)
     }

@@ -14,6 +14,9 @@ struct CountryListDetailView: View {
         Text("Select a country")
         List(countries) { country in
             NavigationLink("\(country.emoji) \(country.name)", value: country)
+                .accessibilityLabel(country.name)
+                .accessibilityHint("Shows stadiums in \(country.name)")
+                .accessibilityIdentifier("country_\(country.name)")
         }
         .listStyle(.plain)
     }

@@ -28,7 +28,7 @@ struct CountryListView: View {
         case .loading:
             CountryListLoadingView()
         case .failed(let error):
-            CountryListErrorView(error: error)
+            CountryListErrorView(viewModel: viewModel, error: error)
         case .success(let stadiumData):
             CountryListDetailView(countries: stadiumData.countries)
                 .navigationDestination(for: Country.self) { country in

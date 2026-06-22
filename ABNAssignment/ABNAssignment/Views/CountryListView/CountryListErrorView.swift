@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct CountryListErrorView: View {
+    let viewModel: CountryListViewModel
     let error: Error
 
     var body: some View {
-        Text(error.localizedDescription)
+        VStack {
+            Text(error.localizedDescription)
+            Button("Try again") {
+                Task {
+                    await viewModel.fetchStadiums()
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    CountryListErrorView(error: StadiumAPIError.invalidURL)
+    CountryListErrorView(
+        viewModel: CountryListViewModel(
+            stadiumApi: MockStadiumApi()
+        ),
+        error: StadiumAPIError.invalidURL
+    )
 }
