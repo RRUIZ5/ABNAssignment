@@ -9,7 +9,6 @@ import Foundation
 import Testing
 @testable import ABNAssignment
 
-@MainActor
 struct WikipediaURLBuilderTests {
     let builder = WikipediaURLBuilder()
 
@@ -27,7 +26,7 @@ struct WikipediaURLBuilderTestCase: CaseIterable {
     let stadium: Stadium
     let expectedURL: URL?
 
-    static var allCases: [WikipediaURLBuilderTestCase] {
+    nonisolated static var allCases: [WikipediaURLBuilderTestCase] {
         [
             .init(
                 stadium: .Mock.Mexico.azteca,

@@ -9,7 +9,6 @@
 import Testing
 import Observation
 
-@MainActor
 struct CountryListViewModelTests {
     let viewModel = CountryListViewModel(stadiumApi: MockStadiumApi())
 
@@ -26,11 +25,9 @@ struct CountryListViewModelTests {
         // parameters of .success are ignored in Equatable
         #expect(thirdState == .success(stadiumData: StadiumData(stadiums: [:])))
     }
-
 }
 
 extension CountryListViewModel {
-    @MainActor
     var stateStream: AsyncStream<StadiumViewModelState> {
         AsyncStream { continuation in
             @MainActor func observe() {

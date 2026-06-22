@@ -14,19 +14,11 @@
 			remoteGlobalIDString = 3F391EA12FE5B87F007D9C36;
 			remoteInfo = ABNAssignment;
 		};
-		3F391EBA2FE5B882007D9C36 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F391E9A2FE5B87F007D9C36 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F391EA12FE5B87F007D9C36;
-			remoteInfo = ABNAssignment;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3F391EA22FE5B87F007D9C36 /* ABNAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABNAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F391EAF2FE5B882007D9C36 /* ABNAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F391EB92FE5B882007D9C36 /* ABNAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABNAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -38,11 +30,6 @@
 		3F391EB22FE5B882007D9C36 /* ABNAssignmentTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ABNAssignmentTests;
-			sourceTree = "<group>";
-		};
-		3F391EBC2FE5B882007D9C36 /* ABNAssignmentUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ABNAssignmentUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,13 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F391EB62FE5B882007D9C36 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,7 +57,6 @@
 			children = (
 				3F391EA42FE5B87F007D9C36 /* ABNAssignment */,
 				3F391EB22FE5B882007D9C36 /* ABNAssignmentTests */,
-				3F391EBC2FE5B882007D9C36 /* ABNAssignmentUITests */,
 				3F391EA32FE5B87F007D9C36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,7 +66,6 @@
 			children = (
 				3F391EA22FE5B87F007D9C36 /* ABNAssignment.app */,
 				3F391EAF2FE5B882007D9C36 /* ABNAssignmentTests.xctest */,
-				3F391EB92FE5B882007D9C36 /* ABNAssignmentUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,29 +118,6 @@
 			productReference = 3F391EAF2FE5B882007D9C36 /* ABNAssignmentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3F391EB82FE5B882007D9C36 /* ABNAssignmentUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F391EC92FE5B882007D9C36 /* Build configuration list for PBXNativeTarget "ABNAssignmentUITests" */;
-			buildPhases = (
-				3F391EB52FE5B882007D9C36 /* Sources */,
-				3F391EB62FE5B882007D9C36 /* Frameworks */,
-				3F391EB72FE5B882007D9C36 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3F391EBB2FE5B882007D9C36 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				3F391EBC2FE5B882007D9C36 /* ABNAssignmentUITests */,
-			);
-			name = ABNAssignmentUITests;
-			packageProductDependencies = (
-			);
-			productName = ABNAssignmentUITests;
-			productReference = 3F391EB92FE5B882007D9C36 /* ABNAssignmentUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,10 +132,6 @@
 						CreatedOnToolsVersion = 26.5;
 					};
 					3F391EAE2FE5B882007D9C36 = {
-						CreatedOnToolsVersion = 26.5;
-						TestTargetID = 3F391EA12FE5B87F007D9C36;
-					};
-					3F391EB82FE5B882007D9C36 = {
 						CreatedOnToolsVersion = 26.5;
 						TestTargetID = 3F391EA12FE5B87F007D9C36;
 					};
@@ -202,7 +153,6 @@
 			targets = (
 				3F391EA12FE5B87F007D9C36 /* ABNAssignment */,
 				3F391EAE2FE5B882007D9C36 /* ABNAssignmentTests */,
-				3F391EB82FE5B882007D9C36 /* ABNAssignmentUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -216,13 +166,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3F391EAD2FE5B882007D9C36 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F391EB72FE5B882007D9C36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,13 +189,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F391EB52FE5B882007D9C36 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -260,11 +196,6 @@
 			isa = PBXTargetDependency;
 			target = 3F391EA12FE5B87F007D9C36 /* ABNAssignment */;
 			targetProxy = 3F391EB02FE5B882007D9C36 /* PBXContainerItemProxy */;
-		};
-		3F391EBB2FE5B882007D9C36 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3F391EA12FE5B87F007D9C36 /* ABNAssignment */;
-			targetProxy = 3F391EBA2FE5B882007D9C36 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -465,7 +396,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,49 +419,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABNAssignment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABNAssignment";
-			};
-			name = Release;
-		};
-		3F391ECA2FE5B882007D9C36 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tlalocGames.ABNAssignmentUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ABNAssignment;
-			};
-			name = Debug;
-		};
-		3F391ECB2FE5B882007D9C36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tlalocGames.ABNAssignmentUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ABNAssignment;
 			};
 			name = Release;
 		};
@@ -558,15 +455,6 @@
 			buildConfigurations = (
 				3F391EC72FE5B882007D9C36 /* Debug */,
 				3F391EC82FE5B882007D9C36 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3F391EC92FE5B882007D9C36 /* Build configuration list for PBXNativeTarget "ABNAssignmentUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F391ECA2FE5B882007D9C36 /* Debug */,
-				3F391ECB2FE5B882007D9C36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
