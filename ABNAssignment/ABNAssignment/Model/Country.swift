@@ -4,7 +4,7 @@
 //
 //  Created by Rodrigo Ruiz Murguía on 19/06/26.
 //
-enum Country: String, Codable, CaseIterable, Identifiable, Comparable {
+enum Country: String, Codable, CaseIterable, Identifiable, Comparable, Equatable {
     case mexico = "mx"
     case brasil = "br"
     case argentina = "ar"

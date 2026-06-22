@@ -51,14 +51,25 @@ final class CountryListViewModel {
     }
 }
 
-enum StadiumViewModelState {
+enum StadiumViewModelState: Equatable {
     case idle
     case loading
     case failed(error: Error)
     case success(stadiumData: StadiumData)
+
+    static func == (lhs: StadiumViewModelState, rhs: StadiumViewModelState) -> Bool {
+        switch (lhs, rhs) {
+        case (.idle, .idle): true
+        case (.loading, .loading): true
+        case let (.failed(lhsError), .failed(error: rhsError)):
+            lhsError.localizedDescription == rhsError.localizedDescription
+        case (.success, .success): true
+        default: false
+        }
+    }
 }
 
-struct StadiumData {
+struct StadiumData: Equatable {
     let stadiums: [Country: [Stadium]]
     var countries: [Country] { Array(stadiums.keys.sorted()) }
 

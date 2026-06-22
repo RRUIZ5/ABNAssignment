@@ -5,7 +5,7 @@
 //  Created by Rodrigo Ruiz Murguía on 19/06/26.
 //
 
-struct Stadium: Identifiable, Codable {
+struct Stadium: Identifiable, Codable, Equatable {
     let name: String
     let latitude: Double
     let longitude: Double
