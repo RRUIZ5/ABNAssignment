@@ -11,9 +11,9 @@ final class WikipediaManager {
 
     init() {}
 
-    func openWikipedia(for stadium: Stadium) {
+    func openWikipedia(for model: WikipediaURLBuildable) {
         let builder = WikipediaURLBuilder()
-        guard let url = builder.generateWikipediaURL(for: stadium) else { return }
+        guard let url = builder.generateWikipediaURL(for: model) else { return }
         UIApplication.shared.open(url)
     }
 }

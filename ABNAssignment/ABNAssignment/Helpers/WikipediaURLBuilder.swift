@@ -8,14 +8,14 @@
 import Foundation
 
 final class WikipediaURLBuilder {
-    func generateWikipediaURL(for stadium: Stadium) -> URL? {
+    func generateWikipediaURL(for model: WikipediaURLBuildable) -> URL? {
         var components = URLComponents()
         components.scheme = "wikipedia"
         components.host = "places"
         components.queryItems = [
-            URLQueryItem(name: "name", value: stadium.name),
-            URLQueryItem(name: "lat", value: String(stadium.latitude)),
-            URLQueryItem(name: "long", value: (String(stadium.longitude)))
+            URLQueryItem(name: "name", value: model.name),
+            URLQueryItem(name: "lat", value: String(model.latitude)),
+            URLQueryItem(name: "long", value: (String(model.longitude)))
         ]
 
         return components.url
