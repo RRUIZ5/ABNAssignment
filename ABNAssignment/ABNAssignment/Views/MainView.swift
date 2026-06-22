@@ -16,7 +16,7 @@ struct MainView: View {
                 CountryListView(viewModel: countryListViewModel)
             }
             Tab("Custom", systemImage: "mappin") {
-                Text("hola")
+                MapLocationPickerView()
             }
         }
     }
